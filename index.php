@@ -2,10 +2,23 @@
 
 require 'functions/function.php';
 
+// --------------------------Practice --------------------------------------------
+// $numbers = [
+//     'stephan' => [1, 2, 3],
+//     'polina' => [4, 5, 6],
+//     'andy' => [7, 8, 9]
+// ];
 
-/**
- * Array
- */
+// foreach ($numbers as $name => $value) {
+//     echo $name . ": ";
+//     foreach ($value as $item) {
+//         echo $item . " ";
+//     }
+//     echo "<br>";
+// }
+// echo "<hr>"; 
+//----------------------------------------
+
 
 // $kites = [
 //     $Gin = ["size" => 8],
@@ -26,77 +39,85 @@ $kites = [
 //     echo "$key : $value <br>";
 // }
 
-$DDD = [
-    ['name' => 'Tim', 'age' => 19, 'hobby' => 'gamen', 'address' => ''],
-    ['name' => 'Meric', 'age' => 21, 'hobby' => 'trainen, gamen', 'address' => 'Winterkoning'],
-    ['name' => 'Jeroen', 'age' => 20, 'hobby' => 'voetbal, gamen', 'address' => '']
-];
+//---------------------------------------------
 
-$numbers = [
-    'stephan' => [1, 2, 3],
-    'polina' => [4, 5, 6],
-    'andy' => [7, 8, 9]
-];
+// $DDD = [
+//     ['name' => 'Tim', 'age' => 19, 'hobby' => 'gamen', 'address' => ''],
+//     ['name' => 'Meric', 'age' => 21, 'hobby' => 'trainen, gamen', 'address' => 'Winterkoning'],
+//     ['name' => 'Jeroen', 'age' => 20, 'hobby' => 'voetbal, gamen', 'address' => '']
+// ];
 
-
-
-foreach ($numbers as $number => $value) {
-    echo $number . ": ";
-    foreach ($value as $item) {
-        echo $item . " ";
-    }
-    echo "<br>";
-}
-
-// die(var_dump($DDD));
-
-sort($DDD);
-// foreach ($DDD as $student) {
-//     echo $student["name"] . " " . $student["age"] . "<br>&nbsp;" . $student["hobby"] . "<hr>";
-
-// }
-
-for ($i = 0; $i < count($DDD); $i++) {
-    echo $DDD[$i]['name'] . " " . $DDD[$i]['hobby'] . " <br>";
-    if ($DDD[$i]['address'] != '') {
-        echo $DDD[$i]['address'] . "<br><hr>";
-    } else {
-        echo "Geen adres <br><hr>";
-    }
-}
-
-// Voor elke kites per kite
-// laat naam zien onder elkaar
-
-// foreach ($kites as $kite) {
-//     foreach ($kite as $key => $value){
-//         echo "$key $value";
+// sort($DDD);
+// foreach($DDD as $index) {
+//     foreach ($index as $keys => $value) {
+//         echo $keys . " :" . $value . "<br>";
 //     }
-//     echo "<hrr>";
+//     echo "<hr>";
 // }
 
-// for ($i = 0; $i < count($kites); $i++) {
-//     echo "$kites[$i] <br>";
+//------------------------------------------
+
+// $persons = [
+//     'person 1' => [ 
+//         'name' => 'rickb',
+//         'hobby' => 'gamen',
+//         'age' => '22',
+//     ],
+//     'person 2' => [ 
+//         'name' => 'bas',
+//         'hobby' => 'mma',
+//         'age' => '26',
+//     ],
+//     'person 3' => [ 
+//         'name' => 'jan',
+//         'hobby' => 'niks',
+//         'age' => '21',
+//     ]
+// ];
+
+// foreach ($persons as $key => $value) {
+//     echo $key . "<br>";
+//     foreach ($value as $keyy => $valuee) {
+//         echo $keyy . " : ". $valuee . "<br>";
+//     }
+//     echo "<hr>";
 // }
 
-//print_r($kites);
-//die(var_dump($kites[2]));
+//----------------------------------------
 
-/**
- * Multidimensional Array
- */
+$groups = [
+    [ 
+        'JeRiCan' => [
+            ['name' => 'rickb', 'hobby' => 'gamen'],
+            ['name' => 'ricks', 'hobby' => 'gamen'],
+            ['name' => 'djimairo', 'hobby' => 'gamen']
+        ]
 
-/**
- * for-loop
- */
+    ],
+    [
+        'GGG' => [
+            ['name' => 'hi', 'hobby' => 'gamen'],
+            ['name' => 'hola', 'hobby' => 'gamen'],
+            ['name' => 'hello', 'hobby' => 'gamen']
+        ]
+    ]
+];
 
-/**
- * foreach-loop
- */
+foreach ($groups as $group) {
+    foreach ($group as $groupName => $value) {
+        echo $groupName . ": <br>";
+        foreach ($value as $member) {
+            foreach ($member as $key => $values) {
+                echo $key . " = " . $values . "<br>";
+            }
+        }
+    }
+    echo "<hr>";
+}
 
-/**
- * Haal de presentatie van een variabele binnen
- */
+//-------------------------------------------------------------
+
+// --------------------------End of practice --------------------------------------------
 
 // Excercise 2
 $name = "Daniel Pustjens";
@@ -217,32 +238,6 @@ $group = [
     ]
 ];
 
-// //??????????????????
-// for ($i = 0; $i < count($group); $i++) {
-//     for ($j = 0; $j < count($group[$i]) ; $j++){
-//         // echo array_keys($group[$i]) . array_values($group[$j]);
-
-
-//         echo "<pre>";
-//         print_r(array_values($group[$i]));
-//         echo "</pre>";
-//     }
-// }
-// //??????????????????
-
-
-// echo "<pre>";
-// print_r(array_keys($group[0]));
-// echo "</pre>";
-
-// echo count($group[0]);
-
-// foreach ($group as $member){
-//     echo $member["name"] . " (" . $member["age"] . ") <br>" . $member["mobile"] . "<br>" . 
-//     $member["email"] . "<br><br>" . $member["collegeName"] . "<br>" . $member["collegeStudy"] .
-//     "<br> Year " . $member["CollegeYear"] . "<br><br>" . $member["family"] . "<br>" . $member["languages"] .
-//     $member["hobbies"] . "<hr>";
-// }
 
 // $studentKeys = array_keys($group);
 // print_r( $studentKeys);
@@ -268,82 +263,56 @@ $group = [
 //     echo "<br><hr>";
 // }
 // // ----------------------------------
-
-
-// for ($i = 0; $i < count($group); $i++) {
-//     echo $group[$i]["name"] . " (" . $group[$i]["age"] . ") <br>" . $group[$i]["mobile"] . 
-//     "<br>" . $group[$i]["email"] . "<br><br>" . $group[$i]["collegeName"] . "<br>" . 
-//     $group[$i]["collegeStudy"] . "<br> Year " . $group[$i]["CollegeYear"] . "<br><br>" . 
-//     $group[$i]["family"] . "<br>" . $group[$i]["languages"] . $group[$i]["hobbies"] . "<hr>";
-// }
-
-// echo "<pre>";
-// print_r($group);
-// echo "</pre>";
-
-// $underdogs = [
-//     'Daniel Pustjens' => [ 
-//         'name' => 'Daniel',
-//         'age' => 22, 'mobile' => 31615601397,
-//         'email' => 'daniel.pustjens@gmail.com',
-//         'collegeName' => 'Windesheim',
-//         'collegeStudy' => 'AD Software Development',
-//         'CollegeYear' => 'Year 1',
-//         'family' => 'Father, Mother',
-//         'languages' => 'PHP, Javascript, HTML, CSS, C',
-//         'hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
-//     ],
-//     'Jordy' => [
-//         'age' => 22,
-//         'mobile' => 31615601397,
-//         'email' => 'daniel.pustjens@gmail.com',
-//         'collegeName' => 'Windesheim',
-//         'collegeStudy' => 'AD Software Development',
-//         'CollegeYear' => 'Year 1',
-//         'family' => 'Father, Mother',
-//         'languages' => 'PHP, Javascript, HTML, CSS, C',
-//         'hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
-//     ],
-//     'Omar' => [
-//         'age' => 22,
-//         'mobile' => 31615601397,
-//         'email' => 'daniel.pustjens@gmail.com',
-//         'collegeName' => 'Windesheim',
-//         'collegeStudy' => 'AD Software Development',
-//         'CollegeYear' => 'Year 1',
-//         'family' => 'Father, Mother',
-//         'languages' => 'PHP, Javascript, HTML, CSS, C',
-//         'hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
-//     ]
-// ];
-
-// foreach ($underdogs as $memberr => $values) {
-//     echo $memberr . ":<br>";
-//     foreach ($values as $keys => $valuess) {
-//         echo $keys . ": " . $valuess . "<br>"; 
-//     } 
-//     echo "<br><hr>";
-// }
-
-$persons = [
-   [ 
-    'JeRiCan' => ['name' => 'rickb'],
-                 ['name' => 'ricks'],
-                 ['name' => 'djimairo']
-
-    ],
-    [
-    'GGG' => ['name' => 'rickb'],
-             ['name' => 'ricks'],
-             ['name' => 'djimairo']
+$groups = [
+    'Underdogs' => [
+        [
+            'Name' => 'Daniel',
+            'Age' => 22, 
+            'Mobile' => 31615601397,
+            'Email' => 'daniel.pustjens@gmail.com',
+            'College name' => 'Windesheim',
+            'College study' => 'AD Software Development',
+            'College year' => 'Year 1',
+            'Family' => 'Father, Mother',
+            'Languages' => 'PHP, Javascript, HTML, CSS, C',
+            'Hobbies' => 'Work-out, Gaming, Sleep, Boxing, MMA'
+        ],
+        [
+            'Name' => 'Jordy',
+            'Age' => 19,
+            'Mobile' => 31634271862,
+            'Email' => 'jmeijer04@hotmail.com',
+            'College name' => 'Windesheim',
+            'College study' => 'AD Software Development',
+            'College year' => 'Year 1',
+            'Family' => 'Father, Mother, Brother',
+            'Languages' => 'PHP, Javascript, HTML, CSS', 
+            'Hobbies' => 'Work-out, Gaming, Reading, Coding'
+        ],
+        [
+            'Name' => 'Omar',
+            'Age' => 21,
+            'Mobile' => 31646571019,
+            'Email' => 'omarcevic2002@gmail.com',
+            'College name' => 'Windesheim',
+            'College study' => 'AD Software Development',
+            'College year' => 'Year 1',
+            'Family' => 'Father, Mother, Sister',
+            'Languages' => 'PHP, Javascript, HTML, CSS, C',
+            'Hobbies' => 'Gaming, Cycling, Fortnite battle pass'
+        ]
     ]
-
 ];
 
-foreach ($persons as $team) {
-
+// Array $groups needs to loop first an assosiative array (key: group, value: information group members).
+foreach ($groups as $group => $infoMembers) {
+    echo $group . "<br>";
+    // The information value is kept in an array with other arrays in there for every member, so a normal foreach loop.
+    foreach ($infoMembers as $infoMember) {
+        // The information for each member is kept in assosiative arrays.
+        foreach ($infoMember as $key => $value) {
+            echo $key . ": " . $value . "<br>";
+        }
+        echo "<hr>";
+    }
 }
-
-    // echo "<pre>";
-    // print_r($persons);
-    // echo "</pre>";
