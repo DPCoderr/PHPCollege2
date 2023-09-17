@@ -2,267 +2,80 @@
 
 require 'functions/function.php';
 
-// --------------------------Practice --------------------------------------------
-// $numbers = [
-//     'stephan' => [1, 2, 3],
-//     'polina' => [4, 5, 6],
-//     'andy' => [7, 8, 9]
-// ];
+/**
+ * Maker: Daniel Pustjens (AD Software Development Student Year 1)
+ * 
+ * Homework software language 1 (week 2):
+ * 
+ * - Make an array with all your members variables. 
+ * - Echo the array using a for loop and foreach loop.
+ * 
+ */
 
-// foreach ($numbers as $name => $value) {
-//     echo $name . ": ";
-//     foreach ($value as $item) {
-//         echo $item . " ";
-//     }
-//     echo "<br>";
-// }
-// echo "<hr>"; 
-//----------------------------------------
-
-
-// $kites = [
-//     $Gin = ["size" => 8],
-//     $Gaastra = ["size" => 12], 
-//     $Naish = ["size" => 10]
-// ];
-
-$kites = [
-    "name" => "Gin",
-    "size" => 8,
-    "name" => "Gaastra",
-    "size" => 12,
-    "name" => "Naish",
-    "size" => 10
-];
-
-// foreach ($kites as $key => $value) {
-//     echo "$key : $value <br>";
-// }
-
-//---------------------------------------------
-
-// $DDD = [
-//     ['name' => 'Tim', 'age' => 19, 'hobby' => 'gamen', 'address' => ''],
-//     ['name' => 'Meric', 'age' => 21, 'hobby' => 'trainen, gamen', 'address' => 'Winterkoning'],
-//     ['name' => 'Jeroen', 'age' => 20, 'hobby' => 'voetbal, gamen', 'address' => '']
-// ];
-
-// sort($DDD);
-// foreach($DDD as $index) {
-//     foreach ($index as $keys => $value) {
-//         echo $keys . " :" . $value . "<br>";
-//     }
-//     echo "<hr>";
-// }
-
-//------------------------------------------
-
-// $persons = [
-//     'person 1' => [ 
-//         'name' => 'rickb',
-//         'hobby' => 'gamen',
-//         'age' => '22',
-//     ],
-//     'person 2' => [ 
-//         'name' => 'bas',
-//         'hobby' => 'mma',
-//         'age' => '26',
-//     ],
-//     'person 3' => [ 
-//         'name' => 'jan',
-//         'hobby' => 'niks',
-//         'age' => '21',
-//     ]
-// ];
-
-// foreach ($persons as $key => $value) {
-//     echo $key . "<br>";
-//     foreach ($value as $keyy => $valuee) {
-//         echo $keyy . " : ". $valuee . "<br>";
-//     }
-//     echo "<hr>";
-// }
-
-//----------------------------------------
-
-$groups = [
-    [ 
-        'JeRiCan' => [
-            ['name' => 'rickb', 'hobby' => 'gamen'],
-            ['name' => 'ricks', 'hobby' => 'gamen'],
-            ['name' => 'djimairo', 'hobby' => 'gamen']
-        ]
-
+// Dimensional array for 1 group with members in there.
+$group = [
+    [
+        'Name' => 'Daniel Pustjens',
+        'Age' => 22,
+        'Mobile' => 31615601397,
+        'Email' => 'daniel.pustjens@gmail.com',
+        'College name' => 'Windesheim',
+        'College study' => 'AD Software Development',
+        'Colleg year' => 'Year 1',
+        'Family' => 'Father, Mother',
+        'Languages' => 'PHP, Javascript, HTML, CSS, C',
+        'Hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
     ],
     [
-        'GGG' => [
-            ['name' => 'hi', 'hobby' => 'gamen'],
-            ['name' => 'hola', 'hobby' => 'gamen'],
-            ['name' => 'hello', 'hobby' => 'gamen']
-        ]
+        'Name' => 'Jordy',
+        'Age' => 22,
+        'Mobile' => 31615601397,
+        'Email' => 'daniel.pustjens@gmail.com',
+        'College name' => 'Windesheim',
+        'College study' => 'AD Software Development',
+        'College year' => 'Year 1',
+        'Family' => 'Father, Mother',
+        'Languages' => 'PHP, Javascript, HTML, CSS, C',
+        'Hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
+    ],
+    [
+        'Name' => 'Omar',
+        'Age' => 22,
+        'Mobile' => 31615601397,
+        'Email' => 'daniel.pustjens@gmail.com',
+        'College name' => 'Windesheim',
+        'College study' => 'AD Software Development',
+        'College year' => 'Year 1',
+        'Family' => 'Father, Mother',
+        'Languages' => 'PHP, Javascript, HTML, CSS, C',
+        'Hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
     ]
 ];
 
-foreach ($groups as $group) {
-    foreach ($group as $groupName => $value) {
-        echo $groupName . ": <br>";
-        foreach ($value as $member) {
-            foreach ($member as $key => $values) {
-                echo $key . " = " . $values . "<br>";
-            }
-        }
+echo "Array for 1 group: <br><br>";
+// Loop the whole group array that has 3 members arrays inside of it.
+foreach ($group as $member) {
+    // Loop each member array which is an associative array.
+    foreach ($member as $key => $value) {
+        echo $key . ": " . $value . "<br>";
     }
     echo "<hr>";
 }
 
-//-------------------------------------------------------------
+// Loop the whole group array that has 3 members arrays inside of it.
+for ($i = 0; $i < count($group); $i++) {
+    // Each member has an associative array, which means you need to know 
+    // how many keys/values there are to know how many times the for loop has to loop.
+    $keysMember = array_keys($group[$i]);
+    $valuesMember = array_values($group[$i]);
+    for ($j = 0; $j < count($keysMember); $j++) {
+        echo $keysMember[$j] . ": " . $valuesMember[$j] . "<br>";
+    }
+    echo "<hr>";
+}
+echo "<hr><hr>";
 
-// --------------------------End of practice --------------------------------------------
-
-// Excercise 2
-$name = "Daniel Pustjens";
-$age = 22;
-$mobile =  31615601397;
-$email = "daniel.pustjens@gmail.com";
-$collegeName = "Windesheim";
-$collegeStudy = "AD Software Development";
-$family = ["Father", "Mother"];
-$languages = [
-    "PHP",
-    "Javascript",
-    "HTML",
-    "CSS",
-    "C"
-];
-$hobbies = [
-    "Work-out",
-    "Game",
-    "Sleep",
-    "Boxing",
-    "MMA"
-];
-
-
-$daniel = [
-    'Daniel Pustjens',
-    22,
-    31615601397,
-    'daniel.pustjens@gmail.com',
-    'Windesheim',
-    'AD Software Development',
-    'Year 1',
-    [
-        'Father',
-        'Mother'
-    ],
-    [
-        'PHP',
-        'Javascript',
-        'HTML',
-        'CSS',
-        'C'
-    ],
-    [
-        'Work-out',
-        'Game',
-        'Sleep',
-        'Boxing',
-        'MMA'
-    ]
-];
-
-// echo "<pre>";
-// print_r($daniel);
-// echo "</pre>";
-
-// for($i = 0; $i < count($daniel); $i++) {
-//     if (is_array($daniel[$i])){
-//         for($j = 0; $j < count($daniel[$i]); $j++) {
-//             echo $daniel[$i][$j];
-//         };   
-//     } else {
-//     echo $daniel[$i] . "<br>";
-//     }
-// }
-
-
-// foreach ($daniel as $info) {
-//     if (is_array($info)){
-//         foreach ($info as $value) {
-//             echo $value;
-//         };   
-//     } else {
-//         echo $info . "<br>";
-//     }
-// }
-
-
-//---------------------------------------------------------------------
-// Exercise 3
-$group = [
-    [
-        'name' => 'Daniel Pustjens',
-        'age' => 22,
-        'mobile' => 31615601397,
-        'email' => 'daniel.pustjens@gmail.com',
-        'collegeName' => 'Windesheim',
-        'collegeStudy' => 'AD Software Development',
-        'CollegeYear' => 'Year 1',
-        'family' => 'Father, Mother',
-        'languages' => 'PHP, Javascript, HTML, CSS, C',
-        'hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
-    ],
-    [
-        'name' => 'Jordy',
-        'age' => 22,
-        'mobile' => 31615601397,
-        'email' => 'daniel.pustjens@gmail.com',
-        'collegeName' => 'Windesheim',
-        'collegeStudy' => 'AD Software Development',
-        'CollegeYear' => 'Year 1',
-        'family' => 'Father, Mother',
-        'languages' => 'PHP, Javascript, HTML, CSS, C',
-        'hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
-    ],
-    [
-        'name' => 'Omar',
-        'age' => 22,
-        'mobile' => 31615601397,
-        'email' => 'daniel.pustjens@gmail.com',
-        'collegeName' => 'Windesheim',
-        'collegeStudy' => 'AD Software Development',
-        'CollegeYear' => 'Year 1',
-        'family' => 'Father, Mother',
-        'languages' => 'PHP, Javascript, HTML, CSS, C',
-        'hobbies' => 'Work-out, Game, Sleep, Boxing, MMA',
-    ]
-];
-
-
-// $studentKeys = array_keys($group);
-// print_r( $studentKeys);
-// for ($i = 0; $i < count($studentKeys); $i++) {
-//     echo $studentKeys . $group[$studentKeys[$i]];
-// }
-
-
-
-// echo "<pre>";
-// print_r(array_keys($group[0]));
-// echo "</pre>";
-
-// echo count($group[0]);
-
-
-
-// // ----------------------------------
-// foreach ($group as $member) {
-//     foreach ($member as $key => $value) {
-//         echo $key. ": " . $value . "<br>"; 
-//     } 
-//     echo "<br><hr>";
-// }
-// // ----------------------------------
+//  Dimensional array for multiple groups with members in there.
 $groups = [
     'Underdogs' => [
         [
@@ -304,15 +117,17 @@ $groups = [
     ]
 ];
 
-// Array $groups needs to loop first an assosiative array (key: group, value: information group members).
-foreach ($groups as $group => $infoMembers) {
+echo "Array for multiple groups: <br><br>";
+// Array $groups needs to loop first an associative array (key: group, value: information group members).
+foreach ($groups as $group => $member) {
     echo $group . "<br>";
     // The information value is kept in an array with other arrays in there for every member, so a normal foreach loop.
-    foreach ($infoMembers as $infoMember) {
-        // The information for each member is kept in assosiative arrays.
+    foreach ($member as $infoMember) {
+        // The information for each member is kept in associative arrays.
         foreach ($infoMember as $key => $value) {
             echo $key . ": " . $value . "<br>";
         }
         echo "<hr>";
     }
 }
+?>
